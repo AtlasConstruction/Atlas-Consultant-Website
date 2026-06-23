@@ -8,15 +8,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/92 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex min-w-0 items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/atlas-logo-full.png"
+            src="/atlas-logo.png"
             alt={`${company.name} - ${company.tagline}`}
-            width={420}
-            height={145}
+            width={64}
+            height={64}
             priority
-            className="h-12 w-auto max-w-[210px] object-contain sm:h-14 sm:max-w-[260px] lg:max-w-[300px]"
+            className="h-11 w-11 rounded-md object-contain"
           />
+          <span>
+            <span className="block text-base font-black tracking-wide text-navy-950">{company.name}</span>
+            <span className="block text-xs font-semibold text-gold-700">{company.tagline}</span>
+          </span>
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (
