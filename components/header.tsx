@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { company, navLinks } from "@/lib/site-data";
@@ -7,12 +8,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/92 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="flex h-11 w-11 items-center justify-center rounded-md bg-navy-900 text-lg font-black text-gold-300">A</span>
-          <span>
-            <span className="block text-base font-black tracking-wide text-navy-950">{company.name}</span>
-            <span className="block text-xs font-semibold text-gold-700">{company.tagline}</span>
-          </span>
+        <Link href="/" className="flex min-w-0 items-center">
+          <Image
+            src="/atlas-logo-full.png"
+            alt={`${company.name} - ${company.tagline}`}
+            width={420}
+            height={145}
+            priority
+            className="h-12 w-auto max-w-[210px] object-contain sm:h-14 sm:max-w-[260px] lg:max-w-[300px]"
+          />
         </Link>
         <nav className="hidden items-center gap-6 lg:flex">
           {navLinks.map((link) => (

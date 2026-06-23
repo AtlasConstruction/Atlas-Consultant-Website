@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     title: "Atlas Consultant",
     description: "Structural audit and society building repair consultants across MMR."
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/atlas-logo.png"
+  },
   alternates: {
     canonical: "/"
   }
