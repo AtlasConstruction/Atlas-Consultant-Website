@@ -1,3 +1,3 @@
-# WEBSITE
+# Atlas-Consultant-Website
 
 Atlas Consultant website built with Next.js, TypeScript, and Tailwind CSS.

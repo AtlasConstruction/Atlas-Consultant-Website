@@ -6,7 +6,7 @@ import { Button } from "@/components/button";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/92 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-navy-100 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
@@ -15,16 +15,16 @@ export function Header() {
             width={64}
             height={64}
             priority
-            className="h-11 w-11 rounded-md object-contain"
+            className="h-11 w-11 object-contain"
           />
           <span>
             <span className="block text-base font-black tracking-wide text-navy-950">{company.name}</span>
             <span className="block text-xs font-semibold text-gold-700">{company.tagline}</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-5 lg:flex">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-sm font-semibold text-navy-700 transition hover:text-gold-700">
+            <Link key={link.href} href={link.href} className="text-sm font-semibold text-navy-700 transition hover:text-navy-950">
               {link.label}
             </Link>
           ))}
