@@ -43,8 +43,8 @@ export default function Home() {
           <div className="relative">
             <div className="overflow-hidden rounded-lg border border-navy-100 shadow-premium">
               <Image
-                src={projectPhotoSet[0].card}
-                alt="Atlas Consultant completed residential society exterior"
+                src="/best-structural-audit-consultants-mumbai.png"
+                alt="High-rise residential society structural audit and repair consultancy project in Mumbai"
                 width={900}
                 height={1100}
                 priority
