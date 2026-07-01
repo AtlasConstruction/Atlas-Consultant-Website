@@ -12,7 +12,6 @@ export type KnowledgeTopic = {
 };
 
 export const knowledgeCategories = [
-  "BOQ & Rate Analysis",
   "Building Repair",
   "Codes & Standards",
   "Ethics & Panel Judgement Questions",
@@ -4675,107 +4674,6 @@ export const knowledgeTopics: KnowledgeTopic[] = [
       },
       {
         "question": "Can contractors decide why should bmc give you category a independently?",
-        "answer": "Contractors can execute work, but independent consultant review helps separate technical diagnosis from commercial interest."
-      },
-      {
-        "question": "What records should be kept?",
-        "answer": "Keep inspection notes, photographs, test results, drawings, BOQ, contractor submissions, site reports, measurement sheets and completion certificates."
-      },
-      {
-        "question": "How should urgent issues be prioritized?",
-        "answer": "Urgent issues involve active safety risk, severe corrosion, falling plaster, structural cracking, instability, leakage affecting reinforcement or unsafe access conditions."
-      },
-      {
-        "question": "What is Atlas Consultant's technical recommendation?",
-        "answer": "Base every decision on observed evidence, documented severity, applicable standards and a repair method that is practical for the society's building condition."
-      },
-      {
-        "question": "What should be avoided?",
-        "answer": "Avoid verbal-only approvals, vague lump-sum scopes, incompatible materials, skipping surface preparation, undocumented measurements and issuing safety statements without adequate inspection."
-      }
-    ],
-    "glossary": [
-      {
-        "term": "NDT",
-        "definition": "Non-destructive testing used to assess existing concrete or reinforcement condition without major damage to the member."
-      },
-      {
-        "term": "BOQ",
-        "definition": "Bill of Quantities, a measured schedule of repair items used for tendering, billing and cost control."
-      }
-    ]
-  },
-  {
-    "title": "What separates a responsible auditor from a normal engineer?",
-    "slug": "what-separates-a-responsible-auditor-from-a-normal-engineer",
-    "category": "BOQ & Rate Analysis",
-    "section": "ETHICS & PANEL JUDGEMENT QUESTIONS",
-    "source": "Responsible auditor: conservative judgement, thorough documentation, clear method statements, verification with tests, transparent communication with client & municipality, and willingness to refuse unsafe certifications. A normal engineer may do only minimum.",
-    "quickAnswer": "Responsible auditor: conservative judgement, thorough documentation, clear method statements, verification with tests, transparent communication with client & municipality, and willingness to refuse unsafe certifications.",
-    "readingTime": "7 min read",
-    "faqs": [
-      {
-        "question": "What is What separates a responsible auditor from a normal engineer?",
-        "answer": "Responsible auditor: conservative judgement, thorough documentation, clear method statements, verification with tests, transparent communication with client & municipality, and willingness to refuse unsafe certifications."
-      },
-      {
-        "question": "Why is what separates a responsible auditor from a normal engineer important for housing societies?",
-        "answer": "It affects safety, repair budgets, tender clarity, committee responsibility and long-term durability of the building."
-      },
-      {
-        "question": "When should a consultant review what separates a responsible auditor from a normal engineer?",
-        "answer": "A consultant should review it when distress is visible, leakage persists, repairs are being planned, statutory compliance is required or contractor quotations are being compared."
-      },
-      {
-        "question": "What documents help evaluate what separates a responsible auditor from a normal engineer?",
-        "answer": "Useful documents include structural drawings, previous audit reports, repair records, leakage complaints, photographs, contractor bills, municipal notices and society meeting decisions."
-      },
-      {
-        "question": "What site signs are relevant to what separates a responsible auditor from a normal engineer?",
-        "answer": "Relevant signs include cracks, spalling, exposed reinforcement, dampness, leakage stains, hollow plaster, corrosion marks, deflection, settlement and repeated repair failure."
-      },
-      {
-        "question": "Which tests may be connected with what separates a responsible auditor from a normal engineer?",
-        "answer": "Depending on the issue, engineers may use rebound hammer, UPV, cover meter, half-cell potential, carbonation depth, core testing or chemical analysis."
-      },
-      {
-        "question": "Can what separates a responsible auditor from a normal engineer be decided only visually?",
-        "answer": "Visual inspection is the starting point, but safety-critical decisions should be supported by measurements, drawings, testing or engineering judgment where required."
-      },
-      {
-        "question": "How does Atlas document what separates a responsible auditor from a normal engineer?",
-        "answer": "Atlas-style documentation should record location, severity, probable cause, photographs, drawings or panel markings, recommended action, priority and BOQ implications."
-      },
-      {
-        "question": "What is a common mistake in what separates a responsible auditor from a normal engineer?",
-        "answer": "A common mistake is treating symptoms without diagnosing the cause, which can lead to repeated leakage, recurring cracks or unnecessary repair expenditure."
-      },
-      {
-        "question": "What should society committees ask before approving work related to what separates a responsible auditor from a normal engineer?",
-        "answer": "Committees should ask for technical basis, scope, material specification, measurement method, quality checks, warranty conditions and billing verification process."
-      },
-      {
-        "question": "Does what separates a responsible auditor from a normal engineer affect tendering?",
-        "answer": "Yes. Clear diagnosis and specifications help create comparable contractor bids and reduce ambiguity during execution."
-      },
-      {
-        "question": "What safety precautions apply to what separates a responsible auditor from a normal engineer?",
-        "answer": "Site teams should use PPE, access controls, fall protection for facade work, barricading, electrical safety and emergency response planning."
-      },
-      {
-        "question": "How is quality controlled for what separates a responsible auditor from a normal engineer?",
-        "answer": "Quality is controlled through approved materials, surface preparation checks, stage inspections, measurements, testing where needed and documented completion review."
-      },
-      {
-        "question": "What is the engineer's role in what separates a responsible auditor from a normal engineer?",
-        "answer": "The engineer interprets site evidence, checks technical risk, recommends a proportionate solution and protects the society from unsafe or poorly specified work."
-      },
-      {
-        "question": "How does what separates a responsible auditor from a normal engineer connect with building durability?",
-        "answer": "Durability improves when the root cause is addressed, materials are compatible, workmanship is controlled and maintenance is planned."
-      },
-      {
-        "question": "Can contractors decide what separates a responsible auditor from a normal engineer independently?",
         "answer": "Contractors can execute work, but independent consultant review helps separate technical diagnosis from commercial interest."
       },
       {

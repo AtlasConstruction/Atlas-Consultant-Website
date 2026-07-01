@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Search } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
-import { boqItems, knowledgeCategories, knowledgeTopics } from "@/lib/knowledge-data";
+import { knowledgeCategories, knowledgeTopics } from "@/lib/knowledge-data";
 import { categorySlug } from "@/lib/knowledge-utils";
 
 export const metadata = {
@@ -11,10 +11,12 @@ export const metadata = {
 };
 
 export default function KnowledgeCentrePage() {
-  const featured = knowledgeTopics.slice(0, 12);
-  const counts = knowledgeCategories.map((category) => ({
+  const visibleCategories = knowledgeCategories;
+  const visibleTopics = knowledgeTopics;
+  const featured = visibleTopics.slice(0, 12);
+  const counts = visibleCategories.map((category) => ({
     category,
-    count: knowledgeTopics.filter((topic) => topic.category === category).length
+    count: visibleTopics.filter((topic) => topic.category === category).length
   }));
 
   return (
@@ -43,13 +45,10 @@ export default function KnowledgeCentrePage() {
               <p className="mt-4 text-3xl font-black text-navy-950">{knowledgeCategories.length}</p>
               <p className="text-sm font-semibold text-navy-600">Knowledge categories</p>
             </div>
-            <Link href="/knowledge-centre/boq-rate-analysis" className="rounded-lg border border-navy-100 bg-white p-5 shadow-sm transition hover:border-gold-500">
-              <p className="text-3xl font-black text-navy-950">{boqItems.length}</p>
-              <p className="mt-1 text-sm font-semibold text-navy-600">BOQ and rate items extracted</p>
-              <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-gold-700">
-                Open BOQ guide <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+            <div className="rounded-lg border border-navy-100 bg-white p-5 shadow-sm">
+              <p className="text-3xl font-black text-navy-950">AI</p>
+              <p className="mt-1 text-sm font-semibold text-navy-600">Structured for search engines and AI answers</p>
+            </div>
           </div>
         </div>
       </section>
@@ -86,7 +85,7 @@ export default function KnowledgeCentrePage() {
 
       <section className="section bg-slate-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {knowledgeCategories.map((category) => (
+          {visibleCategories.map((category) => (
             <div key={category} id={categorySlug(category)} className="mb-12 scroll-mt-28">
               <div className="mb-5 flex items-end justify-between gap-4">
                 <div>
@@ -95,7 +94,7 @@ export default function KnowledgeCentrePage() {
                 </div>
               </div>
               <div className="grid gap-3 md:grid-cols-2">
-                {knowledgeTopics
+                {visibleTopics
                   .filter((topic) => topic.category === category)
                   .slice(0, 18)
                   .map((topic) => (

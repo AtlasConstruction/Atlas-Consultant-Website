@@ -15,8 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/faq",
     "/blog",
     "/knowledge-centre",
-    "/knowledge-centre/glossary",
-    "/knowledge-centre/boq-rate-analysis"
+    "/knowledge-centre/glossary"
   ];
   return [
     ...staticRoutes.map((route) => ({ url: absoluteUrl(route), lastModified: new Date() })),
@@ -24,6 +23,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...landingPages.map(([slug]) => ({ url: absoluteUrl(`/${slug}`), lastModified: new Date() })),
     ...projects.map((project) => ({ url: absoluteUrl(`/projects/${project.slug}`), lastModified: new Date() })),
     ...blogTopics.map((post) => ({ url: absoluteUrl(`/blog/${post.slug}`), lastModified: new Date() })),
-    ...knowledgeTopics.map((topic) => ({ url: absoluteUrl(`/knowledge-centre/${topic.slug}`), lastModified: new Date() }))
+    ...knowledgeTopics
+      .filter((topic) => topic.category !== "BOQ & Rate Analysis")
+      .map((topic) => ({ url: absoluteUrl(`/knowledge-centre/${topic.slug}`), lastModified: new Date() }))
   ];
 }
