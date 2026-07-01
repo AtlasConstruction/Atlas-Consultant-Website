@@ -110,7 +110,7 @@ export default function Home() {
 
       <section className="section bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Project proof" title="Society and commercial projects from the Atlas Consultant profile" />
+          <SectionHeading eyebrow="Project proof" title="Representative Atlas Consultant project gallery" />
           <div className="grid gap-5 md:grid-cols-3">
             {projects.slice(0, 6).map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="overflow-hidden rounded-lg border border-navy-100 bg-white transition hover:border-gold-500 hover:shadow-premium">

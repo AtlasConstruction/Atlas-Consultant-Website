@@ -246,28 +246,6 @@ export const landingPages = [
   ["redevelopment-consultant-navi-mumbai", "Redevelopment Consultant Navi Mumbai", "Navi Mumbai", "redevelopment-consultancy"]
 ] as const;
 
-const actualProjectNames = [
-  "Forest Hill Co. Op. Hsg. Soc. Ltd.",
-  "Vasudev Planet Co. Op. Hsg. Soc. Ltd.",
-  "Narendra Park Venus Co. Op. Hsg. Soc. Ltd.",
-  "Om Shivalaya 2A and 2B Co. Op. Hsg. Soc. Ltd.",
-  "Sana Heights Co. Op. Hsg. Soc. Ltd.",
-  "Ostwal Heights Building 1 Co. Op. Hsg. Soc. Ltd.",
-  "Ostwal Heights Building 3 Co. Op. Hsg. Soc. Ltd.",
-  "Lake View Co. Op. Hsg. Soc. Ltd.",
-  "DCB Bank Ltd.",
-  "Royal Accord 3 Co. Op. Hsg. Soc. Ltd.",
-  "Peninsula Business Ltd.",
-  "Jyestha Srishti Co. Op. Hsg. Soc. Ltd.",
-  "Asmita Sameer Co. Op. Hsg. Soc. Ltd.",
-  "Ayesha Apartment Co. Op. Hsg. Soc. Ltd.",
-  "Khushi Residency Co. Op. Hsg. Soc. Ltd.",
-  "Sukh Angan Co. Op. Hsg. Soc. Ltd.",
-  "Satyadeep Co. Op. Hsg. Soc. Ltd.",
-  "Marigold 1 Co. Op. Hsg. Soc. Ltd.",
-  "Silver Oak 1 Co. Op. Hsg. Soc. Ltd."
-];
-
 export const expertiseImages = [
   { src: "/profile-pages/atlas-expertise-18.png", title: "Building Repairs: Restoration Journey" },
   { src: "/profile-pages/atlas-expertise-19.png", title: "Polymer Treatment" },
@@ -301,7 +279,7 @@ export const projectPhotoSet = [
 export const projects = Array.from({ length: 25 }, (_, index) => {
   const service = services[index % services.length];
   const city = locations[(index + 4) % locations.length];
-  const actualName = actualProjectNames[index];
+  const projectNumber = String(index + 1).padStart(2, "0");
   const photo = projectPhotoSet[index % projectPhotoSet.length];
   const gallery = [
     projectPhotoSet[index % projectPhotoSet.length],
@@ -310,14 +288,14 @@ export const projects = Array.from({ length: 25 }, (_, index) => {
   ];
   return {
     slug: `housing-society-case-study-${index + 1}`,
-    name: actualName || `${city} Cooperative Housing Society Case Study ${index + 1}`,
+    name: `${service.title} Project ${projectNumber}`,
     location: city,
     category: service.title,
     scope: service.includes.slice(0, 3).join(", "),
-    source: actualName ? "Atlas Profile" : "Template",
+    source: "Atlas project gallery",
     image: photo.card,
     imageFull: photo.src,
-    imageAlt: `${photo.title} - ${actualName || city}`,
+    imageAlt: `${photo.title} - ${service.title} project ${projectNumber}`,
     gallery,
     challenge:
       "The managing committee needed a technically sound diagnosis, transparent repair scope and a contractor-ready plan that society members could understand.",

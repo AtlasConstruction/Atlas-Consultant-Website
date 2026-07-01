@@ -3,8 +3,8 @@ import Link from "next/link";
 import { projectPhotoSet, projects } from "@/lib/site-data";
 
 export const metadata = {
-  title: "Housing Society Project Case Studies",
-  description: "Structural audit, building repair, waterproofing, PMC and redevelopment case study templates for Atlas Consultant projects."
+  title: "Atlas Consultant Project Gallery",
+  description: "Representative structural audit, building repair, waterproofing, PMC and redevelopment project photos from Atlas Consultant."
 };
 
 export default function ProjectsPage() {
@@ -12,7 +12,7 @@ export default function ProjectsPage() {
     <main className="section bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-sm font-black uppercase tracking-[0.18em] text-gold-700">Projects</p>
-        <h1 className="mt-3 text-4xl font-black text-navy-950 md:text-6xl">Society project case studies</h1>
+        <h1 className="mt-3 text-4xl font-black text-navy-950 md:text-6xl">Atlas Consultant project gallery</h1>
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <Link key={project.slug} href={`/projects/${project.slug}`} className="overflow-hidden rounded-lg border border-navy-100 bg-white shadow-sm transition hover:shadow-premium">
