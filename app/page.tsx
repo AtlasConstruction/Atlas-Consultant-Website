@@ -5,7 +5,7 @@ import { Button } from "@/components/button";
 import { LeadForm } from "@/components/lead-form";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCards } from "@/components/service-card";
-import { company, locations, processSteps, projects, usps } from "@/lib/site-data";
+import { company, locations, processSteps, projectPhotoSet, projects, usps } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -43,8 +43,8 @@ export default function Home() {
           <div className="relative">
             <div className="overflow-hidden rounded-lg border border-navy-100 shadow-premium">
               <Image
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
-                alt="Residential building inspected by Atlas Consultant"
+                src={projectPhotoSet[0].card}
+                alt="Atlas Consultant completed residential society exterior"
                 width={900}
                 height={1100}
                 priority
@@ -113,13 +113,16 @@ export default function Home() {
           <SectionHeading eyebrow="Project proof" title="Society and commercial projects from the Atlas Consultant profile" />
           <div className="grid gap-5 md:grid-cols-3">
             {projects.slice(0, 6).map((project) => (
-              <Link key={project.slug} href={`/projects/${project.slug}`} className="rounded-lg border border-navy-100 bg-white p-5 transition hover:border-gold-500 hover:shadow-premium">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-gold-700">{project.category}</p>
-                <h3 className="mt-3 text-xl font-black text-navy-950">{project.name}</h3>
-                <p className="mt-3 text-sm leading-7 text-navy-700">{project.scope}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-navy-900">
-                  View case study <ArrowRight className="h-4 w-4" />
-                </span>
+              <Link key={project.slug} href={`/projects/${project.slug}`} className="overflow-hidden rounded-lg border border-navy-100 bg-white transition hover:border-gold-500 hover:shadow-premium">
+                <Image src={project.image} alt={project.imageAlt} width={900} height={600} className="aspect-[4/3] w-full object-cover" />
+                <div className="p-5">
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-gold-700">{project.category}</p>
+                  <h3 className="mt-3 text-xl font-black text-navy-950">{project.name}</h3>
+                  <p className="mt-3 text-sm leading-7 text-navy-700">{project.scope}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-navy-900">
+                    View case study <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>

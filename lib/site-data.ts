@@ -279,10 +279,35 @@ export const expertiseImages = [
   { src: "/profile-pages/atlas-expertise-25.png", title: "Terrace Waterproofing" }
 ];
 
+export const projectPhotoSet = [
+  { src: "/project-photos/atlas-project-098.webp", card: "/project-photos/atlas-project-098-card.webp", title: "Completed residential society exterior" },
+  { src: "/project-photos/atlas-project-089.webp", card: "/project-photos/atlas-project-089-card.webp", title: "Facade repair scaffolding and access" },
+  { src: "/project-photos/atlas-project-094.webp", card: "/project-photos/atlas-project-094-card.webp", title: "High-rise repair work with safety netting" },
+  { src: "/project-photos/atlas-project-045.webp", card: "/project-photos/atlas-project-045-card.webp", title: "External building rehabilitation in progress" },
+  { src: "/project-photos/atlas-project-042.webp", card: "/project-photos/atlas-project-042-card.webp", title: "Society building repair under scaffolding" },
+  { src: "/project-photos/atlas-project-025.webp", card: "/project-photos/atlas-project-025-card.webp", title: "Full elevation building repair staging" },
+  { src: "/project-photos/atlas-project-076.webp", card: "/project-photos/atlas-project-076-card.webp", title: "Residential facade repair project" },
+  { src: "/project-photos/atlas-project-041.webp", card: "/project-photos/atlas-project-041-card.webp", title: "Residential society exterior inspection" },
+  { src: "/project-photos/atlas-project-060.webp", card: "/project-photos/atlas-project-060-card.webp", title: "Royal Accord society building" },
+  { src: "/project-photos/atlas-project-067.webp", card: "/project-photos/atlas-project-067-card.webp", title: "Commercial building inspection" },
+  { src: "/project-photos/atlas-project-097.webp", card: "/project-photos/atlas-project-097-card.webp", title: "Large residential society campus" },
+  { src: "/project-photos/atlas-project-018.webp", card: "/project-photos/atlas-project-018-card.webp", title: "High-rise society condition review" },
+  { src: "/project-photos/atlas-project-012.webp", card: "/project-photos/atlas-project-012-card.webp", title: "Exposed reinforcement and corrosion mapping" },
+  { src: "/project-photos/atlas-project-057.webp", card: "/project-photos/atlas-project-057-card.webp", title: "Column jacketing and strengthening work" },
+  { src: "/project-photos/atlas-project-064.webp", card: "/project-photos/atlas-project-064-card.webp", title: "RCC repair execution under scaffolding" },
+  { src: "/project-photos/atlas-project-092.webp", card: "/project-photos/atlas-project-092-card.webp", title: "Repair mortar application in progress" }
+];
+
 export const projects = Array.from({ length: 25 }, (_, index) => {
   const service = services[index % services.length];
   const city = locations[(index + 4) % locations.length];
   const actualName = actualProjectNames[index];
+  const photo = projectPhotoSet[index % projectPhotoSet.length];
+  const gallery = [
+    projectPhotoSet[index % projectPhotoSet.length],
+    projectPhotoSet[(index + 1) % projectPhotoSet.length],
+    projectPhotoSet[(index + 12) % projectPhotoSet.length]
+  ];
   return {
     slug: `housing-society-case-study-${index + 1}`,
     name: actualName || `${city} Cooperative Housing Society Case Study ${index + 1}`,
@@ -290,6 +315,10 @@ export const projects = Array.from({ length: 25 }, (_, index) => {
     category: service.title,
     scope: service.includes.slice(0, 3).join(", "),
     source: actualName ? "Atlas Profile" : "Template",
+    image: photo.card,
+    imageFull: photo.src,
+    imageAlt: `${photo.title} - ${actualName || city}`,
+    gallery,
     challenge:
       "The managing committee needed a technically sound diagnosis, transparent repair scope and a contractor-ready plan that society members could understand.",
     solution:
