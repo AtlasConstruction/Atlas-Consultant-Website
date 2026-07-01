@@ -55,7 +55,6 @@ export default function AboutPage() {
     email: "atlasconsultant.pmc@outlook.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: company.address,
       addressRegion: "Maharashtra",
       addressCountry: "IN"
     },
@@ -189,7 +188,6 @@ export default function AboutPage() {
                 atlasconsultant.pmc@outlook.com
               </a>
             </div>
-            <p className="mt-6 text-sm leading-7 text-navy-600">Office: {company.address}</p>
           </div>
         </footer>
       </article>
