@@ -41,6 +41,7 @@ export const company = {
 export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services/structural-audit", label: "Services" },
+  { href: "/knowledge-centre", label: "Knowledge" },
   { href: "/projects", label: "Projects" },
   { href: "/process", label: "Process" },
   { href: "/blog", label: "Insights" },
