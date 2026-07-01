@@ -307,7 +307,7 @@ export const projects = Array.from({ length: 25 }, (_, index) => {
   };
 });
 
-export const blogTopics = [
+const generatedBlogTopics = [
   "Structural Audit for Housing Societies in Mumbai",
   "How to Read a Structural Audit Report",
   "Structural Stability Certificate Requirements",
@@ -366,6 +366,16 @@ export const blogTopics = [
   category: ["Structural Audit", "Waterproofing", "Building Repairs", "PMC", "Redevelopment", "Society Management"][index % 6],
   readingTime: `${7 + (index % 5)} min read`
 }));
+
+export const blogTopics = [
+  {
+    slug: "maharashtra-bpms-bmc-structural-engineer-license",
+    title: "How to Obtain a Maharashtra State Structural Engineer License and BMC Structural Engineer License",
+    category: "Structural Engineering",
+    readingTime: "8 min read"
+  },
+  ...generatedBlogTopics
+];
 
 export const faqs = Array.from({ length: 52 }, (_, index) => {
   const topic = blogTopics[index % blogTopics.length].title;

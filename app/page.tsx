@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/button";
 import { LeadForm } from "@/components/lead-form";
+import { LicensedEngineersBadge } from "@/components/licensed-engineers-badge";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCards } from "@/components/service-card";
 import { company, locations, processSteps, projectPhotoSet, projects, usps } from "@/lib/site-data";
@@ -22,6 +23,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-8 text-navy-700">
               Serving Housing Societies Across Mumbai, Thane, Navi Mumbai, Mira Bhayandar, Vasai-Virar and the entire Mumbai Metropolitan Region.
             </p>
+            <LicensedEngineersBadge />
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/contact">Request Site Inspection</Button>
               <Button href="/contact" variant="ghost">
