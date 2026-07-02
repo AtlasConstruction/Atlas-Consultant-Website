@@ -45,8 +45,12 @@ export default function Home() {
                 className="h-[480px] w-full object-cover"
               />
               <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/40 bg-white/92 p-5 text-navy-950 shadow-premium backdrop-blur">
-                <p className="text-sm font-black uppercase tracking-[0.16em] text-gold-700">Municipal experience</p>
-                <p className="mt-2 text-sm font-semibold">{company.municipalities.join(" | ")}</p>
+                <p className="text-sm font-black uppercase tracking-[0.16em] text-gold-700">
+                  <span className="marker-highlight marker-highlight-heading">Municipal experience</span>
+                </p>
+                <p className="mt-2 text-sm font-semibold">
+                  <span className="marker-highlight marker-highlight-soft">{company.municipalities.join(" | ")}</span>
+                </p>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-4">
