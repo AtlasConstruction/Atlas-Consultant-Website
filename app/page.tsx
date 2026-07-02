@@ -44,13 +44,13 @@ export default function Home() {
                 priority
                 className="h-[480px] w-full object-cover"
               />
-              <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/40 bg-white/92 p-5 text-navy-950 shadow-premium backdrop-blur">
-                <p className="text-sm font-black uppercase tracking-[0.16em] text-gold-700">
-                  <span className="marker-highlight marker-highlight-heading">Municipal experience</span>
-                </p>
-                <p className="mt-2 text-sm font-semibold">
-                  <span className="marker-highlight marker-highlight-soft">{company.municipalities.join(" | ")}</span>
-                </p>
+              <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/30 bg-white/88 p-3 shadow-premium backdrop-blur">
+                <div className="rounded-md bg-[#8B6B00] px-4 py-3 text-white shadow-[0_14px_32px_rgba(7,28,51,0.28)]">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-white sm:text-sm">
+                    Municipal experience
+                  </p>
+                  <p className="mt-2 text-base font-black leading-6 text-white sm:text-lg">{company.municipalities.join(" | ")}</p>
+                </div>
               </div>
             </div>
             <div className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-4">

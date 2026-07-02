@@ -43,57 +43,6 @@ body {
   padding: 5rem 0;
 }
 
-.marker-highlight {
-  position: relative;
-  isolation: isolate;
-  display: inline;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.marker-highlight::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: -0.18em;
-  right: -0.18em;
-  bottom: 0.04em;
-  height: 0.7em;
-  border-radius: 999px 44px 999px 52px;
-  transform: scaleX(0.92) rotate(-0.8deg);
-  transform-origin: left center;
-  animation: marker-sweep 900ms ease-out both;
-}
-
-.marker-highlight-heading::before {
-  background: linear-gradient(90deg, rgba(201, 155, 46, 0.34), rgba(255, 214, 102, 0.22));
-}
-
-.marker-highlight-soft::before {
-  bottom: 0;
-  height: 0.78em;
-  background: linear-gradient(90deg, rgba(255, 214, 102, 0.28), rgba(201, 155, 46, 0.2));
-  animation-delay: 120ms;
-}
-
-@keyframes marker-sweep {
-  from {
-    clip-path: inset(0 100% 0 0 round 999px);
-    opacity: 0;
-  }
-
-  to {
-    clip-path: inset(0 0 0 0 round 999px);
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .marker-highlight::before {
-    animation: none;
-  }
-}
-
 @media (max-width: 768px) {
   .section {
     padding: 3.5rem 0;
