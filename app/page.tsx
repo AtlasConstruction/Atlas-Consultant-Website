@@ -33,17 +33,9 @@ export default function Home() {
                 <Phone className="mr-2 h-4 w-4" /> Call Now
               </Button>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-              {company.stats.map((stat) => (
-                <div key={stat.label} className="rounded-lg border border-navy-100 bg-white p-4 shadow-sm">
-                  <p className="text-3xl font-black text-navy-950">{stat.value}</p>
-                  <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-navy-500">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-lg border border-navy-100 shadow-premium">
+          <div>
+            <div className="relative overflow-hidden rounded-lg border border-navy-100 shadow-premium">
               <Image
                 src="/best-structural-audit-consultants-mumbai.png"
                 alt="High-rise residential society structural audit and repair consultancy project in Mumbai"
@@ -52,10 +44,18 @@ export default function Home() {
                 priority
                 className="h-[480px] w-full object-cover"
               />
+              <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/40 bg-white/92 p-5 text-navy-950 shadow-premium backdrop-blur">
+                <p className="text-sm font-black uppercase tracking-[0.16em] text-gold-700">Municipal experience</p>
+                <p className="mt-2 text-sm font-semibold">{company.municipalities.join(" | ")}</p>
+              </div>
             </div>
-            <div className="absolute -bottom-6 left-4 right-4 rounded-lg border border-navy-100 bg-white p-5 text-navy-950 shadow-premium">
-              <p className="text-sm font-black uppercase tracking-[0.16em] text-gold-700">Municipal experience</p>
-              <p className="mt-2 text-sm font-semibold">{company.municipalities.join(" | ")}</p>
+            <div className="mt-6 grid grid-cols-2 gap-3 xl:grid-cols-4">
+              {company.stats.map((stat) => (
+                <div key={stat.label} className="rounded-lg border border-navy-100 bg-white p-4 shadow-sm">
+                  <p className="text-3xl font-black text-navy-950">{stat.value}</p>
+                  <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-navy-500">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
