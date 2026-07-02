@@ -6,7 +6,7 @@ import { LeadForm } from "@/components/lead-form";
 import { LicensedEngineersBadge } from "@/components/licensed-engineers-badge";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCards } from "@/components/service-card";
-import { company, locations, processSteps, projectPhotoSet, projects, usps } from "@/lib/site-data";
+import { company, locations, processSteps, projects, usps } from "@/lib/site-data";
 
 export default function Home() {
   return (
@@ -112,7 +112,7 @@ export default function Home() {
 
       <section className="section bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading eyebrow="Project proof" title="Representative Atlas Consultant project gallery" />
+          <SectionHeading eyebrow="Project proof" title="Atlas Consultant project portfolio" />
           <div className="grid gap-5 md:grid-cols-3">
             {projects.slice(0, 6).map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="overflow-hidden rounded-lg border border-navy-100 bg-white transition hover:border-gold-500 hover:shadow-premium">
@@ -120,7 +120,7 @@ export default function Home() {
                 <div className="p-5">
                   <p className="text-xs font-black uppercase tracking-[0.16em] text-gold-700">{project.category}</p>
                   <h3 className="mt-3 text-xl font-black text-navy-950">{project.name}</h3>
-                  <p className="mt-3 text-sm leading-7 text-navy-700">{project.scope}</p>
+                  <p className="mt-3 text-sm leading-7 text-navy-700">Project Scope & Site Photographs</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-navy-900">
                     View case study <ArrowRight className="h-4 w-4" />
                   </span>

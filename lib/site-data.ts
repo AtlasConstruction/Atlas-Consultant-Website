@@ -12,6 +12,7 @@ import {
   ShieldCheck,
   Wrench
 } from "lucide-react";
+import projectPhotoManifest from "../public/project-photos/manifest.json";
 
 export const company = {
   name: "ATLAS CONSULTANT",
@@ -257,53 +258,66 @@ export const expertiseImages = [
   { src: "/profile-pages/atlas-expertise-25.png", title: "Terrace Waterproofing" }
 ];
 
-export const projectPhotoSet = [
-  { src: "/project-photos/atlas-project-098.webp", card: "/project-photos/atlas-project-098-card.webp", title: "Completed residential society exterior" },
-  { src: "/project-photos/atlas-project-089.webp", card: "/project-photos/atlas-project-089-card.webp", title: "Facade repair scaffolding and access" },
-  { src: "/project-photos/atlas-project-094.webp", card: "/project-photos/atlas-project-094-card.webp", title: "High-rise repair work with safety netting" },
-  { src: "/project-photos/atlas-project-045.webp", card: "/project-photos/atlas-project-045-card.webp", title: "External building rehabilitation in progress" },
-  { src: "/project-photos/atlas-project-042.webp", card: "/project-photos/atlas-project-042-card.webp", title: "Society building repair under scaffolding" },
-  { src: "/project-photos/atlas-project-025.webp", card: "/project-photos/atlas-project-025-card.webp", title: "Full elevation building repair staging" },
-  { src: "/project-photos/atlas-project-076.webp", card: "/project-photos/atlas-project-076-card.webp", title: "Residential facade repair project" },
-  { src: "/project-photos/atlas-project-041.webp", card: "/project-photos/atlas-project-041-card.webp", title: "Residential society exterior inspection" },
-  { src: "/project-photos/atlas-project-060.webp", card: "/project-photos/atlas-project-060-card.webp", title: "Royal Accord society building" },
-  { src: "/project-photos/atlas-project-067.webp", card: "/project-photos/atlas-project-067-card.webp", title: "Commercial building inspection" },
-  { src: "/project-photos/atlas-project-097.webp", card: "/project-photos/atlas-project-097-card.webp", title: "Large residential society campus" },
-  { src: "/project-photos/atlas-project-018.webp", card: "/project-photos/atlas-project-018-card.webp", title: "High-rise society condition review" },
-  { src: "/project-photos/atlas-project-012.webp", card: "/project-photos/atlas-project-012-card.webp", title: "Exposed reinforcement and corrosion mapping" },
-  { src: "/project-photos/atlas-project-057.webp", card: "/project-photos/atlas-project-057-card.webp", title: "Column jacketing and strengthening work" },
-  { src: "/project-photos/atlas-project-064.webp", card: "/project-photos/atlas-project-064-card.webp", title: "RCC repair execution under scaffolding" },
-  { src: "/project-photos/atlas-project-092.webp", card: "/project-photos/atlas-project-092-card.webp", title: "Repair mortar application in progress" }
+type ProjectPhoto = {
+  src: string;
+  card: string;
+  width?: number;
+  height?: number;
+  original?: string;
+};
+
+const projectPhotosByOriginal = new Map(
+  (projectPhotoManifest as ProjectPhoto[]).map((photo) => [photo.original?.replace(/^word\//, ""), photo])
+);
+
+function projectPhoto(original: string, projectName: string, index: number) {
+  const photo = projectPhotosByOriginal.get(original);
+  if (!photo) {
+    throw new Error(`Missing project photo for ${original}`);
+  }
+
+  return {
+    ...photo,
+    alt: `${projectName} project photograph ${index + 1}`
+  };
+}
+
+const projectPortfolio = [
+  { name: "Forest Hill Co. Op. Hsg. Soc. Ltd.", media: ["media/image1.jpeg", "media/image2.jpeg", "media/image3.jpeg", "media/image4.jpeg", "media/image5.jpeg", "media/image6.jpeg", "media/image7.jpeg"] },
+  { name: "Vasudev Planet Co. Op. Hsg. Soc. Ltd.", media: ["media/image8.jpeg", "media/image9.jpeg", "media/image10.jpeg", "media/image11.jpeg", "media/image12.jpeg", "media/image13.jpeg", "media/image14.jpeg"] },
+  { name: "Narendra Park Venus Co. Op. Hsg. Soc. Ltd.", media: ["media/image15.jpeg", "media/image16.jpeg", "media/image17.jpeg", "media/image18.jpeg", "media/image19.jpeg", "media/image20.jpeg", "media/image21.jpeg"] },
+  { name: "Om Shivalaya 2A and 2B Co. Op. Hsg. Soc. Ltd.", media: ["media/image22.jpeg", "media/image23.jpeg", "media/image24.jpeg", "media/image25.jpeg", "media/image26.jpeg", "media/image27.jpeg", "media/image28.jpeg"] },
+  { name: "Sana Heights Co. Op. Hsg. Soc. Ltd.", media: ["media/image29.jpeg", "media/image30.jpeg", "media/image31.jpeg", "media/image32.jpeg", "media/image33.jpeg", "media/image34.jpeg", "media/image35.jpeg"] },
+  { name: "Ostwal Heights Building 1 Co. Op. Hsg. Soc. Ltd.", media: ["media/image36.png", "media/image37.jpeg", "media/image38.jpeg", "media/image39.jpeg", "media/image40.jpeg", "media/image41.jpeg", "media/image42.jpeg"] },
+  { name: "Ostwal Heights Building 3 Co. Op. Hsg. Soc. Ltd.", media: ["media/image43.jpeg", "media/image44.jpeg", "media/image45.jpeg", "media/image46.jpeg", "media/image47.jpeg", "media/image48.jpeg", "media/image49.jpeg"] },
+  { name: "Lake View Co. Op. Hsg. Soc. Ltd.", media: ["media/image50.jpeg", "media/image51.jpeg", "media/image52.jpeg", "media/image53.jpeg", "media/image54.jpeg", "media/image55.jpeg", "media/image56.jpeg"] },
+  { name: "DCB Bank Ltd.", media: ["media/image57.jpeg", "media/image58.jpeg", "media/image59.jpeg", "media/image60.jpeg", "media/image61.jpeg", "media/image62.jpeg", "media/image63.jpeg"] },
+  { name: "Royal Accord 3 Co. Op. Hsg. Soc. Ltd.", media: ["media/image64.jpeg", "media/image65.jpeg", "media/image66.jpeg", "media/image67.jpeg", "media/image68.jpeg", "media/image69.jpeg", "media/image70.jpeg"] },
+  { name: "Peninsula Business Ltd.", media: ["media/image71.jpeg"] },
+  { name: "Jyestha Srishti Co. Op. Hsg. Soc. Ltd.", media: ["media/image72.jpeg", "media/image73.jpeg", "media/image74.jpeg", "media/image75.jpeg", "media/image76.jpeg", "media/image77.jpeg", "media/image78.jpeg"] },
+  { name: "Asmita Sameer Co. Op. Hsg. Soc. Ltd.", media: ["media/image79.jpeg", "media/image80.jpeg", "media/image81.jpeg", "media/image82.jpeg", "media/image83.jpeg", "media/image84.jpeg", "media/image85.jpeg"] },
+  { name: "Ayesha Apartment Co. Op. Hsg. Soc. Ltd.", media: ["media/image86.jpeg", "media/image87.jpeg", "media/image88.jpeg", "media/image89.jpeg", "media/image90.jpeg", "media/image91.jpeg", "media/image92.jpeg"] },
+  { name: "Khushi Residency Co. Op. Hsg. Soc. Ltd.", media: ["media/image93.jpeg", "media/image94.jpeg", "media/image95.jpeg", "media/image96.jpeg", "media/image97.jpeg", "media/image98.jpeg", "media/image99.jpeg"] },
+  { name: "Sukh Angan Co. Op. Hsg. Soc. Ltd.", media: ["media/image100.jpeg"] },
+  { name: "Satyadeep Co. Op. Hsg. Soc. Ltd.", media: ["media/image101.jpeg"] },
+  { name: "Marigold 1 Co. Op. Hsg. Soc. Ltd.", media: ["media/image102.jpeg"] },
+  { name: "Silver Oak 1 Co. Op. Hsg. Soc. Ltd.", media: ["media/image103.jpeg"] }
 ];
 
-export const projects = Array.from({ length: 25 }, (_, index) => {
-  const service = services[index % services.length];
-  const city = locations[(index + 4) % locations.length];
-  const projectNumber = String(index + 1).padStart(2, "0");
-  const photo = projectPhotoSet[index % projectPhotoSet.length];
-  const gallery = [
-    projectPhotoSet[index % projectPhotoSet.length],
-    projectPhotoSet[(index + 1) % projectPhotoSet.length],
-    projectPhotoSet[(index + 12) % projectPhotoSet.length]
-  ];
+export const projects = projectPortfolio.map((project, index) => {
+  const photos = project.media.map((media, photoIndex) => projectPhoto(media, project.name, photoIndex));
+  const [featuredImage, ...workPhotos] = photos;
+
   return {
     slug: `housing-society-case-study-${index + 1}`,
-    name: `${service.title} Project ${projectNumber}`,
-    location: city,
-    category: service.title,
-    scope: service.includes.slice(0, 3).join(", "),
-    source: "Atlas project gallery",
-    image: photo.card,
-    imageFull: photo.src,
-    imageAlt: `${photo.title} - ${service.title} project ${projectNumber}`,
-    gallery,
-    challenge:
-      "The managing committee needed a technically sound diagnosis, transparent repair scope and a contractor-ready plan that society members could understand.",
-    solution:
-      "Atlas Consultant prepared defect mapping, repair methodology, BOQ-ready scope, contractor evaluation inputs and PMC controls for quality and billing.",
-    outcome:
-      "The society received a clear technical roadmap, realistic budget visibility and staged execution plan for safer building performance.",
-    timeline: `${6 + (index % 8)} weeks`
+    name: project.name,
+    category: "Project Portfolio",
+    image: featuredImage.card,
+    imageFull: featuredImage.src,
+    imageAlt: featuredImage.alt,
+    gallery: workPhotos,
+    photoCount: photos.length,
+    source: "PROJECT PHOTOS.docx"
   };
 });
 
