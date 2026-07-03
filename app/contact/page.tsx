@@ -1,6 +1,8 @@
 import { LeadForm } from "@/components/lead-form";
 import { company } from "@/lib/site-data";
 
+const contactEmail = "atlasconsultant.pmc@outlook.com";
+
 export const metadata = {
   title: "Contact Atlas Consultant",
   description: "Request structural audit, building repair, waterproofing, PMC or redevelopment consultation for housing societies in Mumbai Metropolitan Region."
@@ -19,7 +21,7 @@ export default function ContactPage() {
           <div className="mt-8 grid gap-3 text-sm font-semibold text-navy-800">
             <a href={`tel:${company.phone}`}>Call: {company.phone}</a>
             <a href={`https://wa.me/${company.whatsapp}`}>WhatsApp: {company.phone}</a>
-            <a href={`mailto:${company.email}`}>Email: {company.email}</a>
+            <a href={`mailto:${contactEmail}`}>Email: {contactEmail}</a>
           </div>
         </div>
         <LeadForm title="Get Free Consultation" />
