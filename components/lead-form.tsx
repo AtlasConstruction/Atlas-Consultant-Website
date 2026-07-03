@@ -1,5 +1,5 @@
 import { Button } from "@/components/button";
-import { company } from "@/lib/site-data";
+import { company, services } from "@/lib/site-data";
 
 export function LeadForm({ title = "Request Free Site Inspection" }: { title?: string }) {
   return (
@@ -15,11 +15,9 @@ export function LeadForm({ title = "Request Free Site Inspection" }: { title?: s
         <input required name="phone" placeholder="Mobile number" className="min-h-11 rounded-md border border-navy-100 bg-white px-3 text-sm outline-none focus:border-gold-500" />
         <input name="society" placeholder="Society / building name" className="min-h-11 rounded-md border border-navy-100 bg-white px-3 text-sm outline-none focus:border-gold-500" />
         <select name="service" className="min-h-11 rounded-md border border-navy-100 bg-white px-3 text-sm outline-none focus:border-gold-500">
-          <option>Structural Audit</option>
-          <option>Building Repair PMC</option>
-          <option>Waterproofing Consultancy</option>
-          <option>Redevelopment Advisory</option>
-          <option>Structural Engineering</option>
+          {services.map((service) => (
+            <option key={service.slug}>{service.title}</option>
+          ))}
         </select>
         <textarea name="message" placeholder="Tell us about cracks, leakage, repair or redevelopment requirement" className="min-h-24 rounded-md border border-navy-100 bg-white px-3 py-3 text-sm outline-none focus:border-gold-500" />
         <Button type="submit">Submit Enquiry</Button>

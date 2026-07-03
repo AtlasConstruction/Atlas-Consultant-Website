@@ -41,7 +41,7 @@ export const company = {
 
 export const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/services/structural-audit", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/knowledge-centre", label: "Knowledge" },
   { href: "/projects", label: "Projects" },
   { href: "/process", label: "Process" },
@@ -52,62 +52,98 @@ export const navLinks = [
 export const services = [
   {
     slug: "structural-audit",
-    title: "Structural Audit",
-    eyebrow: "Society safety and compliance",
+    title: "Structural Engineering & Building Assessment",
+    eyebrow: "Audit, diagnosis and building health",
     icon: ShieldCheck,
-    keywords: ["Structural Audit Consultant Mumbai", "Structural Audit for Housing Societies Mumbai", "Structural Stability Certificate Mumbai"],
+    keywords: ["Structural Audit Consultant Mumbai", "Structural Stability Certificate Mumbai", "Building Condition Assessment MMR"],
     summary:
-      "Detailed structural audits for housing societies, residential buildings and commercial properties with damage mapping, NDT coordination, repair recommendations and stability certification guidance.",
-    includes: ["Internal flat-wise visual survey", "External facade and common-area survey", "Thermal testing in flats", "Moisture meter detection", "Spider Jhula tapping", "NDT testing coordination", "AutoCAD panel markings", "Repair cost estimates", "Structural stability certificates"],
-    process: ["Proposal and process explanation", "Flat-wise internal survey", "External survey using Spider Jhula", "NDT and thermal inspection", "AutoCAD damage mapping", "BOQ and structural audit report"],
+      "Independent structural audit, health assessment and technical investigation services for housing societies, commercial buildings, industrial buildings and institutional properties across Mumbai, Thane, Navi Mumbai, Mira Road, Vasai-Virar and the MMR.",
+    includes: ["Structural Audit", "Structural Stability Certification", "Structural Health Assessment", "Building Condition Assessment", "Technical Due Diligence", "Structural Investigation", "Crack Investigation", "Thermal Imaging Inspection", "Moisture Investigation", "Building Performance Assessment"],
+    benefits: ["Clear engineering diagnosis before repair spending", "Documented safety and serviceability observations", "Better committee decisions for housing society repairs", "Technical basis for repair scope, NDT and PMC planning"],
+    process: ["Site briefing and document review", "Visual and instrument-based inspection", "Damage mapping and investigation planning", "Technical assessment and recommendations", "Report, certification guidance and next-step consultancy"],
     faqs: [
-      ["How often should a housing society conduct a structural audit?", "Most societies should conduct periodic structural audits based on building age, municipal requirements and visible distress. Older or leakage-affected buildings should not wait for statutory deadlines."],
-      ["Do you provide structural stability certificates?", "Atlas Consultant supports societies with structural assessment, audit documentation and stability certification guidance after the required inspection and repair validation."]
+      ["Is Atlas Consultant a contractor?", "No. Atlas Consultant works as an independent structural engineering and technical consultancy, focusing on inspection, investigation, reporting, design advice, tender support and PMC controls."],
+      ["When should a society conduct a structural audit?", "A society should conduct a structural audit as per applicable municipal requirements and whenever visible cracks, corrosion, leakage, loose plaster, settlement or ageing distress is observed."]
+    ]
+  },
+  {
+    slug: "structural-engineering",
+    title: "Structural Design & Engineering",
+    eyebrow: "Design, analysis and technical drawings",
+    icon: HardHat,
+    keywords: ["Structural Engineer Mumbai", "Structural Engineer Thane", "Structural Design Consultant Mumbai"],
+    summary:
+      "Structural design, analysis, drafting and peer-review consultancy for residential, commercial and industrial buildings, including repair design, renovation design, retrofitting design and as-built documentation.",
+    includes: ["Residential Building Design", "Commercial Building Design", "Industrial Building Design", "RCC Design", "Steel Structure Design", "Foundation Design", "Retrofitting Design", "Repair Design", "Renovation Design", "Structural Peer Review", "AutoCAD Drafting", "As-Built Drawings"],
+    benefits: ["Independent structural engineering input", "Design decisions backed by calculations and drawings", "Better coordination between societies, architects and contractors", "Technical clarity for repair, strengthening and renovation works"],
+    process: ["Brief, drawings and site data review", "Structural analysis and design checks", "Design option selection", "Drawing and calculation preparation", "Clarifications during execution or review"],
+    faqs: [
+      ["Do you provide structural peer review?", "Yes. Atlas Consultant provides independent structural peer review for societies, property owners and project teams that need technical validation."],
+      ["Can you prepare repair and retrofitting design?", "Yes. Repair and retrofitting design can be prepared after inspection, condition assessment and review of structural requirements."]
     ]
   },
   {
     slug: "building-repair-rehabilitation",
-    title: "Building Repair & Rehabilitation",
-    eyebrow: "RCC repair and strengthening",
+    title: "Building Repair & Rehabilitation Consultancy",
+    eyebrow: "RCC repair and rehabilitation advisory",
     icon: Hammer,
-    keywords: ["Building Repair Consultant Mumbai", "Society Building Repair Consultant Mumbai", "RCC Repair Consultant Mumbai"],
+    keywords: ["Building Repair Consultant Mumbai", "Building Repair Consultancy Mumbai", "RCC Repair Consultant Mumbai"],
     summary:
-      "Repair consultancy and PMC for RCC repairs, corrosion treatment, facade repairs, crack repair, strengthening, rehabilitation planning and contractor quality monitoring.",
-    includes: ["Polymer treatment", "Micro-concrete jacketing", "FRP fibre wrapping", "Epoxy injection grouting", "Readymix plaster work", "External painting with waterproofing warranty", "Facade repairs", "Rehabilitation planning"],
-    process: ["Defect survey", "Repair methodology", "BOQ and tender", "Contractor selection", "Site supervision", "Final quality certification"],
+      "Professional building repair consultancy for RCC repair, concrete rehabilitation, structural strengthening, facade rehabilitation, repair specifications, BOQ preparation and tender documentation. Atlas Consultant provides engineering advice and PMC support, not contractor-led execution.",
+    includes: ["Building Repair Consultancy", "RCC Repair Consultancy", "Concrete Rehabilitation", "Structural Strengthening", "Building Restoration", "Facade Rehabilitation", "Polymer Modified Mortar Repair", "Polymer Modified Concrete Repair", "Micro Concrete Repair", "Fibre Reinforced Polymer (FRP) Strengthening", "Carbon Fibre Strengthening (CFRP)", "Structural Jacketing", "Epoxy Injection", "Pressure Grouting", "PU Injection Grouting", "Cementitious Grouting", "Corrosion Treatment", "Rebar Treatment & Replacement", "Honeycomb Repair", "Spalled Concrete Repair", "Expansion Joint Repair", "Repair Specifications", "Repair Cost Estimation (BOQ)", "Tender Documentation"],
+    benefits: ["Independent repair methodology before contractor appointment", "Transparent repair scope and BOQ", "Reduced risk of patchwork and repeated repair failure", "Quality-focused site supervision and bill verification"],
+    process: ["Defect survey and diagnosis", "Repair methodology and scope preparation", "BOQ, tender and contractor evaluation", "Repair PMC and quality checkpoints", "Completion review and documentation"],
     faqs: [
-      ["Can Atlas manage the full repair project?", "Yes. The PMC scope can cover tendering, contractor selection, quality control, billing verification, site monitoring and completion documentation."],
-      ["Do you design repair methods?", "Repair methods are selected after diagnosis, severity mapping and structural engineering review, including jacketing, corrosion treatment, polymer mortar, FRP wrapping or micro concrete where appropriate."]
+      ["What does a building repair consultant do?", "A building repair consultant diagnoses defects, prepares repair methodology, defines BOQ and tender scope, evaluates contractors and monitors quality so the society is not dependent only on contractor recommendations."],
+      ["Does Atlas Consultant execute repair work as a contractor?", "No. Atlas Consultant focuses on structural engineering consultancy, repair advisory, tender documentation, PMC, supervision and quality control."]
     ]
   },
   {
     slug: "waterproofing-consultancy",
-    title: "Waterproofing Consultancy",
-    eyebrow: "Leakage diagnosis before treatment",
+    title: "Waterproofing & Leakage Consultancy",
+    eyebrow: "Leakage diagnosis and waterproofing systems",
     icon: Droplets,
-    keywords: ["Waterproofing Consultant Mumbai", "Terrace Waterproofing Consultant Mumbai", "Leakage Investigation Consultant Mumbai"],
+    keywords: ["Waterproofing Consultant Mumbai", "Leakage Investigation Consultant Mumbai", "Terrace Waterproofing Consultant Mumbai"],
     summary:
-      "Waterproofing diagnosis and specification for terraces, external walls, basements and podiums using site investigation, thermal imaging and root-cause analysis.",
-    includes: ["Terrace waterproofing", "External wall waterproofing", "Basement waterproofing", "Podium waterproofing", "Thermal-camera leakage investigation", "Moisture detection", "Seepage and dampness assessment", "Warranty documentation coordination"],
-    process: ["Leakage history", "Moisture survey", "Thermal camera inspection", "Source tracing", "Specification", "Execution monitoring"],
+      "Waterproofing and leakage consultancy for terraces, podiums, basements, toilets, external walls, tanks and expansion joints using moisture investigation, thermal camera leak detection and system-based specifications.",
+    includes: ["Terrace Waterproofing", "Podium Waterproofing", "Basement Waterproofing", "Toilet Waterproofing", "External Wall Waterproofing", "Water Tank Waterproofing", "Expansion Joint Waterproofing", "Leakage Investigation", "Thermal Camera Leak Detection", "Crystalline Waterproofing", "Polymer Cementitious Waterproofing", "PU Waterproofing Systems", "APP Membrane Systems", "SBS Membrane Systems"],
+    benefits: ["Root-cause leakage diagnosis before treatment", "System selection suited to site condition", "Reduced dependency on generic waterproofing proposals", "Warranty and quality-control documentation support"],
+    process: ["Leakage history and visual inspection", "Moisture and thermal imaging review", "Source tracing and system selection", "Specification and tender-ready scope", "Execution monitoring and final checks"],
     faqs: [
       ["Why hire a waterproofing consultant instead of a contractor directly?", "A consultant identifies the leakage source, specifies the right system, prepares scope and monitors quality so the society is not dependent only on contractor claims."],
-      ["Do you use thermal cameras?", "Yes. Thermal imaging using FLIR and FLUKE inspection workflows can help identify concealed moisture paths and leakage patterns."]
+      ["Do you use thermal cameras for leakage detection?", "Yes. Thermal imaging can help identify concealed dampness and leakage patterns when used with site observations and moisture assessment."]
+    ]
+  },
+  {
+    slug: "ndt-testing-coordination",
+    title: "Non-Destructive Testing (NDT) Coordination",
+    eyebrow: "Testing support for structural diagnosis",
+    icon: Radar,
+    keywords: ["NDT Testing Mumbai", "Rebound Hammer Test Mumbai", "UPV Test Mumbai"],
+    summary:
+      "NDT coordination for structural audits and repair investigations, including test selection, agency coordination, site support and interpretation of findings in the context of building condition.",
+    includes: ["NDT Investigation", "Rebound Hammer Test", "Ultrasonic Pulse Velocity (UPV)", "Core Testing Coordination", "Cover Meter Survey", "Carbonation Test", "Half Cell Potential Test", "Chemical Testing Coordination"],
+    benefits: ["Testing aligned with engineering questions", "Better understanding of concrete quality and corrosion risk", "Useful inputs for repair design and rehabilitation planning", "Avoids unnecessary or poorly targeted testing"],
+    process: ["Define testing objective", "Select appropriate NDT methods", "Coordinate testing agency and locations", "Review test results", "Integrate findings into audit or repair recommendations"],
+    faqs: [
+      ["Is NDT required for every structural audit?", "Not always. NDT should be selected based on building age, visible distress, corrosion risk, structural importance and the engineering question being investigated."],
+      ["Does Atlas perform laboratory testing directly?", "Atlas Consultant coordinates and interprets testing through suitable agencies where required, while keeping the consultancy role independent."]
     ]
   },
   {
     slug: "project-management-consultancy",
     title: "Project Management Consultancy",
-    eyebrow: "End-to-end repair PMC",
+    eyebrow: "Planning, tendering, supervision and control",
     icon: ClipboardCheck,
     keywords: ["PMC Consultant Mumbai", "Building Repair PMC Consultant Mumbai", "Project Management Consultant Mumbai"],
     summary:
-      "PMC services for society repair and waterproofing projects, including tender preparation, contractor selection, site monitoring, billing verification and quality control.",
-    includes: ["Complete site supervision", "Daily work report sheets", "Quality control", "Quantity control", "Leakage solution coordination", "Material management", "Weekly committee meetings", "Microsoft Project work-program monitoring", "Joint measurements", "Payment certificates"],
-    process: ["Scope freeze", "Tender and BOQ", "Comparative statement", "Contractor onboarding", "Daily reporting", "Progress review", "Joint measurement and billing verification"],
+      "PMC consultancy for building repair, waterproofing, painting, rehabilitation and society engineering projects, covering planning, tendering, contractor evaluation, QA/QC, monitoring, billing and completion documentation.",
+    includes: ["Project Planning", "BOQ Preparation", "Tender Preparation", "Contractor Evaluation", "Bid Comparison", "Agreement Documentation", "Technical Documentation", "Site Supervision", "Quality Assurance & Quality Control", "Progress Monitoring", "Cost Control", "Bill Certification", "Project Completion Consultancy"],
+    benefits: ["Protects the society's technical and financial interest", "Improves transparency in contractor appointment and billing", "Creates measurable quality checkpoints", "Supports committee decisions with documentation"],
+    process: ["Project scope freeze", "BOQ and tender preparation", "Contractor evaluation and bid comparison", "Site supervision and QA/QC", "Bill certification and completion consultancy"],
     faqs: [
       ["What does a repair PMC do for a society?", "A PMC protects the society's technical and financial interest by defining scope, selecting capable contractors, monitoring work quality and verifying bills."],
-      ["Can you prepare tender documents?", "Yes. Atlas prepares detailed tender documents, BOQs, technical specifications and contractor comparison statements."]
+      ["Can Atlas prepare tender documents?", "Yes. Atlas Consultant prepares technical tender documents, BOQs, specifications and contractor comparison inputs for committee review."]
     ]
   },
   {
@@ -117,27 +153,93 @@ export const services = [
     icon: Building2,
     keywords: ["Redevelopment Consultant Mumbai", "Society Redevelopment Consultant Mumbai", "Housing Society Redevelopment Consultant Mumbai"],
     summary:
-      "Redevelopment advisory for housing societies including feasibility, developer selection, tendering support, agreement review coordination and project monitoring.",
-    includes: ["Feasibility studies", "Developer selection", "Tendering", "Agreement review", "Project monitoring", "Member communication support"],
-    process: ["Feasibility", "Member briefings", "Tender strategy", "Developer evaluation", "Agreement coordination", "Construction monitoring"],
+      "Technical redevelopment consultancy for housing societies, including existing building assessment, feasibility support, developer evaluation, technical due diligence and redevelopment advisory.",
+    includes: ["Redevelopment Feasibility Study", "Existing Building Assessment", "Society Technical Advisory", "Developer Evaluation", "Technical Due Diligence", "Redevelopment Support"],
+    benefits: ["Technical clarity before major redevelopment decisions", "Independent assessment of existing building condition", "Structured developer evaluation support", "Better communication between committee, members and advisors"],
+    process: ["Existing building assessment", "Feasibility and technical review", "Developer evaluation inputs", "Technical due diligence", "Redevelopment support and monitoring inputs"],
     faqs: [
       ["When should a society consider redevelopment?", "Redevelopment should be evaluated when repairs are technically or financially insufficient, FSI potential is significant, or long-term safety and amenity goals cannot be met through repairs alone."],
       ["Do you help with developer selection?", "Yes. Atlas supports technical tendering, developer comparison and evaluation criteria so committees can make informed decisions."]
     ]
   },
   {
-    slug: "structural-engineering",
-    title: "Structural Engineering",
-    eyebrow: "Design, analysis and repair engineering",
-    icon: HardHat,
-    keywords: ["Structural Engineer Mumbai", "Structural Engineer Thane", "Structural Engineer Navi Mumbai"],
+    slug: "plumbing-utility-consultancy",
+    title: "Plumbing & Utility Consultancy",
+    eyebrow: "Water supply, drainage and utility assessment",
+    icon: Wrench,
+    keywords: ["Plumbing Rehabilitation Consultant Mumbai", "Drainage System Assessment Mumbai", "Utility Infrastructure Assessment MMR"],
     summary:
-      "Structural design, analysis, RCC design, repair design and strengthening design for residential and society-focused projects.",
-    includes: ["Structural design", "Structural analysis", "RCC design", "Repair design", "Structural strengthening design", "Design audit services"],
-    process: ["Brief and drawings", "Analysis model", "Design checks", "Drawing issue", "Site queries", "Completion review"],
+      "Technical consultancy for plumbing rehabilitation, water supply condition review, drainage assessment, rainwater pipe planning and utility infrastructure assessment in housing societies and commercial buildings.",
+    includes: ["Plumbing Rehabilitation", "Water Supply Assessment", "Drainage System Assessment", "Rainwater Pipe Consultancy", "Utility Infrastructure Assessment"],
+    benefits: ["Identifies recurring leakage and drainage issues", "Improves coordination with civil repair and waterproofing scope", "Supports long-term maintenance planning", "Creates a documented technical basis for utility upgrades"],
+    process: ["Utility complaint and layout review", "Site inspection and condition assessment", "Repair or replacement recommendations", "Scope and specification preparation", "PMC support during execution where required"],
     faqs: [
-      ["Do you provide design audit services?", "Yes. Design audit services are available for societies, developers and committees that need independent technical review."],
-      ["Can you design strengthening works?", "Yes. Strengthening design is prepared after diagnosis, load assessment and condition evaluation."]
+      ["Can plumbing rehabilitation be planned with building repair?", "Yes. Plumbing, waterproofing and facade repair scopes should be coordinated to avoid repeated breaking, leakage and rework."],
+      ["Do you inspect rainwater pipes?", "Yes. Rainwater pipe condition and routing can be reviewed as part of building repair, leakage or monsoon-readiness consultancy."]
+    ]
+  },
+  {
+    slug: "painting-protective-coating-consultancy",
+    title: "Painting & Protective Coating Consultancy",
+    eyebrow: "Facade protection and coating systems",
+    icon: Award,
+    keywords: ["External Painting Consultant Mumbai", "Anti Carbonation Coating Consultant", "Protective Coating Systems Mumbai"],
+    summary:
+      "Consultancy for external painting, facade coatings, anti-carbonation systems and protective coating specifications after repair, waterproofing or rehabilitation works.",
+    includes: ["External Painting Consultancy", "Internal Painting Consultancy", "Podium Painting Consultancy", "Facade Painting Consultancy", "Anti-Carbonation Coatings", "Protective Coating Systems"],
+    benefits: ["Coating selection aligned with building exposure", "Better protection after concrete repair", "Clear material specifications and quality checks", "Reduced risk of premature coating failure"],
+    process: ["Surface condition assessment", "Coating system selection", "Specification and tender scope", "Surface preparation quality checks", "Application monitoring and completion review"],
+    faqs: [
+      ["Why does painting need consultancy?", "Painting and protective coating failures often come from poor surface preparation, wrong system selection or weak quality checks. Consultancy defines the correct technical scope."],
+      ["Do anti-carbonation coatings help RCC buildings?", "Anti-carbonation coatings can help reduce carbonation ingress when selected and applied correctly after concrete repair and surface preparation."]
+    ]
+  },
+  {
+    slug: "beautification-horticulture-consultancy",
+    title: "Beautification & Horticulture Consultancy",
+    eyebrow: "Common area and landscape improvement",
+    icon: MapPin,
+    keywords: ["Society Beautification Consultant Mumbai", "Landscape Planning Consultant MMR", "Podium Landscape Design Mumbai"],
+    summary:
+      "Consultancy for society beautification, garden development, podium landscape planning, hardscape, softscape and common area enhancement after technical feasibility and utility coordination.",
+    includes: ["Landscape Planning", "Garden Development", "Society Beautification", "Podium Landscape Design", "Hardscape Design", "Softscape Design", "Tree Plantation Planning", "Common Area Enhancement"],
+    benefits: ["Improves common areas without compromising technical performance", "Coordinates landscape with waterproofing and drainage requirements", "Supports phased society improvement planning", "Creates a cleaner brief for vendors and committees"],
+    process: ["Common area review", "Landscape and utility constraints check", "Concept and scope preparation", "Vendor scope coordination", "Quality and completion review"],
+    faqs: [
+      ["Can podium landscape affect waterproofing?", "Yes. Podium landscaping should be coordinated with waterproofing, drainage and loading considerations to avoid leakage and maintenance problems."],
+      ["Do you help societies plan common area upgrades?", "Yes. Atlas Consultant can support technical planning and scope preparation for society common area enhancement."]
+    ]
+  },
+  {
+    slug: "society-engineering-advisory",
+    title: "Society Engineering Advisory",
+    eyebrow: "Preventive maintenance and committee support",
+    icon: FileCheck2,
+    keywords: ["Society Technical Advisory Mumbai", "Annual Building Inspection Mumbai", "Preventive Maintenance Planning MMR"],
+    summary:
+      "Ongoing engineering advisory for housing societies, including annual building inspection, preventive maintenance planning, capital repair planning, reserve fund support and engineering documentation.",
+    includes: ["Annual Building Inspection", "Preventive Maintenance Planning", "Capital Repair Planning", "Reserve Fund Planning Support", "Engineering Documentation", "AutoCAD Damage Mapping", "Society Technical Advisory"],
+    benefits: ["Moves societies from reactive repair to planned maintenance", "Supports budget planning for major repairs", "Improves committee records and member communication", "Creates continuity across audits, repairs and PMC decisions"],
+    process: ["Annual inspection or advisory brief", "Record and complaint review", "Priority mapping", "Budget and maintenance planning support", "Committee-ready technical documentation"],
+    faqs: [
+      ["Can Atlas support annual maintenance planning?", "Yes. Annual inspections and preventive maintenance planning help societies identify priority repairs before they become emergency works."],
+      ["Can you support reserve fund planning?", "Atlas Consultant can provide technical inputs and repair-priority guidance that committees may use for capital repair and reserve fund planning discussions."]
+    ]
+  },
+  {
+    slug: "municipal-technical-coordination",
+    title: "Municipal & Technical Coordination",
+    eyebrow: "Documentation and authority coordination support",
+    icon: BadgeCheck,
+    keywords: ["Municipal Technical Coordination Mumbai", "Repair Permission Documentation Mumbai", "Structural Audit Permission Documentation"],
+    summary:
+      "Technical documentation and coordination support for municipal repair requirements, structural audit documentation, technical reports, authority submission assistance and engineering liaison.",
+    includes: ["Municipal Technical Coordination", "Repair Permission Documentation", "Structural Audit Permission Documentation", "Technical Reports", "Authority Submission Assistance", "Engineering Liaison Support"],
+    benefits: ["Better documentation for committee and authority processes", "Clear technical reports for repair or audit matters", "Support across municipal contexts in the MMR", "Reduces confusion around technical submission requirements"],
+    process: ["Requirement and jurisdiction review", "Technical document preparation", "Coordination inputs for authority submission", "Clarification and response support", "Record closeout for society files"],
+    faqs: [
+      ["Do you help with municipal technical documents?", "Yes. Atlas Consultant supports technical reports, repair documentation and coordination inputs where engineering documentation is required."],
+      ["Which municipal areas do you understand?", "Atlas Consultant has experience across BMC, MBMC, VVMC, TMC, NMMC, KDMC and PMC contexts."]
     ]
   }
 ];
