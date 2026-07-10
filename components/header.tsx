@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Phone } from "lucide-react";
 import { company, navLinks } from "@/lib/site-data";
 import { Button } from "@/components/button";
+import { MobileNavigation } from "@/components/mobile-navigation";
 
 export function Header() {
   return (
@@ -29,7 +30,7 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 sm:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <a href={`tel:${company.phone}`} className="inline-flex items-center gap-2 text-sm font-bold text-navy-900">
             <Phone className="h-4 w-4 text-gold-700" />
             Call
@@ -38,6 +39,7 @@ export function Header() {
             Request Inspection
           </Button>
         </div>
+        <MobileNavigation />
       </div>
     </header>
   );
