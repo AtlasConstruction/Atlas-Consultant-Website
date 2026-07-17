@@ -61,7 +61,6 @@ export default function Home() {
                   sizes="(min-width: 1024px) 45vw, 100vw"
                   className="hero-bg-slide hero-bg-slide-3 object-cover"
                 />
-                <div className="absolute inset-0 bg-navy-950/45" />
               </div>
               <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/30 bg-white/88 p-3 shadow-premium backdrop-blur">
                 <div className="rounded-md bg-[#8B6B00] px-4 py-3 text-white shadow-[0_14px_32px_rgba(7,28,51,0.28)]">
