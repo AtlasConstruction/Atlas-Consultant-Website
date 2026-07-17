@@ -43,6 +43,60 @@ body {
   padding: 5rem 0;
 }
 
+.hero-bg-slide {
+  opacity: 0;
+  transform: scale(1);
+  will-change: opacity, transform;
+  animation: hero-crossfade 15s ease-in-out infinite;
+  backface-visibility: hidden;
+}
+
+.hero-bg-slide-1 {
+  animation-delay: 0s;
+}
+
+.hero-bg-slide-2 {
+  animation-delay: 5s;
+}
+
+.hero-bg-slide-3 {
+  animation-delay: 10s;
+}
+
+@keyframes hero-crossfade {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  6.666% {
+    opacity: 1;
+  }
+
+  33.333% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  40%,
+  100% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-slide {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+
+  .hero-bg-slide-1 {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .section {
     padding: 3.5rem 0;
